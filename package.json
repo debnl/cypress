@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/debnl/cypress/issues"
   },
-  "homepage": "https://github.com/debnl/cypress#readme"
+  "homepage": "https://github.com/debnl/cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  }
 }
