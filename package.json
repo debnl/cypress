@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "alura",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debnl/cypress.git"
+  },
+  "author": "edb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debnl/cypress/issues"
+  },
+  "homepage": "https://github.com/debnl/cypress#readme"
+}
