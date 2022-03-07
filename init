@@ -1,0 +1,4 @@
+Como iniciar o projeto em cypress:
+
+- npm init
+- npm i cypress --save-dev
