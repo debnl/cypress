@@ -47,4 +47,27 @@ describe('Login e registro de usuário alura pic', ()=> {
 
     })
 
+    it('verifica mensagem de must be lower case', () =>{
+        cy.contains('a', 'Register now').click();
+        cy.get('input[formcontrolname="userName"]').type('Deb');
+        cy.contains('button', 'Register').click();
+        cy.contains('ap-vmessage', 'Must be lower case').should('be.visible');
+
+    })
+
+    it('fazer login de usuário válido', () => {
+        cy.login('flavio', '123')
+        cy.on ('window:alert', (str) => {
+            expect(str).to.equal('Invalid user name or password')
+        })
+    })
+
+    it('fazer login de usuário inválido', () => {
+        cy.login('deb', 'deb')
+        cy.on ('window:alert', (str) => {
+            expect(str).to.equal('Invalid user name or password')
+        })
+    })
+
+
 })
