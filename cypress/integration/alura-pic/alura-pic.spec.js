@@ -55,8 +55,8 @@ describe('Login e registro de usuário alura pic', ()=> {
 
     })
 
-    it('fazer login de usuário válido', () => {
-        cy.login('flavio', '123')
+    it.only('fazer login de usuário válido', () => {
+        cy.login('debnll', '1234578')
         cy.on ('window:alert', (str) => {
             expect(str).to.equal('Invalid user name or password')
         })
@@ -69,5 +69,9 @@ describe('Login e registro de usuário alura pic', ()=> {
         })
     })
 
+    it('fazer registro de novo usuário', () => {
+        cy.registerNewUser('deb@hotmail.com', 'deborah', 'debnll', '12345678')
+        
+    })
 
 })
