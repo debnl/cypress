@@ -69,9 +69,18 @@ describe('Login e registro de usuário alura pic', ()=> {
         })
     })
 
-    it('fazer registro de novo usuário', () => {
-        cy.registerNewUser('deb@hotmail.com', 'deborah', 'debnll', '12345678')
-        
+    const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario => {
+
+        it.only(`fazer registro de novo usuário ${usuario.userName} `, () => {
+            cy.registerNewUser((usuario.email), (usuario.fullName), (usuario.userName), (usuario.password));
+            
+        })
+
     })
+    
+
+    
 
 })
+
